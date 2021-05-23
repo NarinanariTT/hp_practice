@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>web first try</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    
+    <label for="guessField">予想を入力してください: </label><input type="text" id="guessField" class="guessField">
+    <input type="submit" value="予想を投稿" class="guessSubmit">
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+    
+    <button><p>Player 1: Chris</p></button>
+</body>
+</html>
+
+<script>
+//     const para = document.querySelector('p');
+
+//     para.addEventListener('click', updateName);
+
+//     function updateName() {
+//     let name = prompt('名前を入力して下さい');
+//     para.textContent = 'Player 1: ' + name;
+//     }
+
+//     function createParagraph() {
+//     let para = document.createElement('p');
+//     para.textContent = 'ボタンが押されました!';
+//     document.body.appendChild(para);
+//   }
+
+//   document.addEventListener("DOMContentLoaded", function() {
+//   const buttons = document.querySelectorAll('button');
+
+//   for(let i = 0; i < buttons.length ; i++) {
+//     buttons[i].addEventListener('click', createParagraph);
+//   }
+// });
+// Math.floor(Math.random() * 100) + 1
+let randomNumber = 5;
+
+const guesses = document.querySelector('.guesses');
+const lastResult = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+
+const guessSubmit = document.querySelector('.guessSubmit');
+const guessField = document.querySelector('.guessField');
+
+let guessCount = 1;
+let resetButton;
+
+function checkGuess() {
+  let userGuess = Number(guessField.value);
+  if (guessCount === 1) {
+    guesses.textContent = '答えは: ';
+  } else {
+    //   guesses.textContent -= 'い';
+      guesses.textContent += 'が';
+  }
+//   guesses.textContent += userGuess + ' ';
+
+  if (userGuess === randomNumber) {
+    lastResult.textContent = 'おめでとう! 正解は' + randomNumber + 'です!';
+    lastResult.style.backgroundColor = 'green';
+    lowOrHi.textContent = '';
+    setGameOver();
+  } else if (guessCount === 10) {
+    lastResult.textContent = '!!!ゲームオーバー!!!';
+    setGameOver();
+  } else {
+    lastResult.textContent = '間違いです!';
+    lastResult.style.backgroundColor = 'red';
+    if(userGuess < randomNumber) {
+      lowOrHi.textContent='今の予想は小さすぎです!' ;
+      guesses.textContent += userGuess + 'より大きい';
+    } else if(userGuess > randomNumber) {
+      lowOrHi.textContent = '今の予想は大きすぎです!';
+      guesses.textContent += userGuess + 'より小さい';
+    }
+  }
+
+  guessCount++;
+  guessField.value = '';
+  guessField.focus();
+}
+
+guessSubmit.addEventListener('click', checkGuess);
+
+function setGameOver() {
+  guessField.disabled = true;
+  guessSubmit.disabled = true;
+  resetButton = document.createElement('button');
+  resetButton.textContent = '新しいゲームを始める';
+  document.body.appendChild(resetButton);
+  resetButton.addEventListener('click', resetGame);
+}
+
+function resetGame() {
+  guessCount = 1;
+
+  const resetParas = document.querySelectorAll('.resultParas p');
+  for (let i = 0 ; i < resetParas.length ; i++) {
+    resetParas[i].textContent = '';
+  }
+
+  resetButton.parentNode.removeChild(resetButton);
+
+  guessField.disabled = false;
+  guessSubmit.disabled = false;
+  guessField.value = '';
+  guessField.focus();
+
+  lastResult.style.backgroundColor = 'white';
+
+  randomNumber = Math.floor(Math.random() * 100) + 1;
+}
+</script>
+
+<style>
+    /* p {
+    font-family: 'helvetica neue', helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid rgba(0,0,200,0.6);
+    background: rgba(0,0,200,0.3);
+    color: rgba(0,0,200,0.6);
+    box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+    border-radius: 10px;
+    padding: 3px 10px;
+    display: inline-block;
+    cursor: pointer;
+  } */
+</style>
