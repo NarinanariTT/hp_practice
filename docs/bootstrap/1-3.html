@@ -61,7 +61,8 @@
                     <td>body</td>
                 </tr>
             </table>
-            <p>上記のように、タグだけでは見た目ができない。不便なのではなく、豊富なクラスにより様々な表現が可能。</p>
+            <p>上記のように、タグだけでは見た目ができない。不便なのではなく、豊富なクラスにより様々な表現が可能。 <a  href="https://getbootstrap.jp/docs/5.0/content/tables/" target="_blank">公式ドキュメント Table</a></p>
+
             <div class="row">
                 <div class="card col-6">
                     <div class="card-title">クラス<code>table</code>を付与</div>
@@ -85,67 +86,124 @@
                     </table>
                 </div>
                 <div class="card col-6">
-                    <div class="card-title">クラス<code>table</code>を付与</div>
-                    <table class="table">
-                        <tr>
-                            <th>head</th>
-                            <td>body</td>
-                        </tr>
-                        <tr>
-                            <th>head</th>
-                            <td>body</td>
-                        </tr>
-                        <tr>
-                            <th>head</th>
-                            <td>body</td>
-                        </tr>
-                        <tr>
-                            <th>head</th>
-                            <td>body</td>
-                        </tr>
-                    </table>
+                    <div class="card-title">クラス<code>caption-top table-dark</code>を付与</div>
+
+                    <table class="table caption-top table-dark ">
+                        <caption>List of users</caption>
+                        <thead >
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
                 <div class="card col-6">
-                    <div class="card-title">クラス<code>table</code>を付与</div>
-                    <table class="table">
-                        <tr>
-                            <th>head</th>
-                            <td>body</td>
-                        </tr>
-                        <tr>
-                            <th>head</th>
-                            <td>body</td>
-                        </tr>
-                        <tr>
-                            <th>head</th>
-                            <td>body</td>
-                        </tr>
-                        <tr>
-                            <th>head</th>
-                            <td>body</td>
-                        </tr>
-                    </table>
-                </div>
+                    <div class="card-title">クラス<code>table caption-top table-striped table-success</code>を付与</div>
+                    <div class="table-responsive">
+                    <table class="table caption-top table-success table-striped">
+                        <caption>List of users</caption>
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table></div>
+                </div> 
                 <div class="card col-6">
-                    <div class="card-title">クラス<code>table</code>を付与</div>
-                    <table class="table">
-                        <tr>
-                            <th>head</th>
-                            <td>body</td>
-                        </tr>
-                        <tr>
-                            <th>head</th>
-                            <td>body</td>
-                        </tr>
-                        <tr>
-                            <th>head</th>
-                            <td>body</td>
-                        </tr>
-                        <tr>
-                            <th>head</th>
-                            <td>body</td>
-                        </tr>
-                    </table>
+                    <div class="card-title">クラス<code>table-bordered table-sm table-danger</code>を付与</div>
+                    <table class="table-bordered table-danger table-sm">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
 
                 <h4>コード</h4>
