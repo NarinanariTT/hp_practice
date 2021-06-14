@@ -4,28 +4,29 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>bootstrap1-3</title>
+    <title>bootstrap1-4</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <style>
-            .header {
-                text-align: center;
-            }
-            
-        </style>
+        
   </head>
   <body>
     <div class="container" >
-        <div class="header" href="./index.html">
-            <h1><a class="text-decoration-none" href="./index.html">Bootstrap</a>入門#04</h1>
-            <h3>便利コンポーネント</h3>
-        </div>
+        
+        <h1 class="center"><a class="text-decoration-none" href="./index.html">Bootstrap</a>入門#04</h1>
+        <h3 class="center">便利コンポーネント</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="./index.html">Bootstrap</a></li>
+              <li class="breadcrumb-item active" aria-current="page">#04 便利コンポーネント</li>
+            </ol>
+          </nav>
         <p>bootstrapが用意してくれている様々なコンポーネントを紹介する。</p>
         <h4></h4>
         <div class="pb-5">
         <a class="btn btn-outline-dark" href="./index.html">bootstrap記事一覧に戻る</a>
-        <a class="btn btn-outline-dark" href="./1-2.html">#03へ戻る</a>
+        <a class="btn btn-outline-dark" href="./1-3.html">#03へ戻る</a>
         <a class="btn btn-outline-dark" href="./1-4.html">#05へ進む</a>
         </div>
         
@@ -42,3 +43,10 @@
     -->
   </body>
 </html>
+
+<style>
+    .center {
+        text-align: center;
+    }
+    
+</style>

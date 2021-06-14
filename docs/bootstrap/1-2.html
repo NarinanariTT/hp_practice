@@ -8,25 +8,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <style>
-            .header {
-                /* background-color: lightcyan; */
-                text-align: center;
-            }
-            .box1 {
-                background-color: lightgoldenrodyellow;
-            }
-
-            .box2 {
-                background-color: lightblue;
-            }
-        </style>
   </head>
   <body>
     <div class="container" >
-        <div class="header" href="./index.html">
-            <h1><a class="text-decoration-none" href="./index.html">Bootstrap</a>入門#02</h1>
-            <h3>グリッドシステム</h3>
+        
+            <h1 class="center"><a class="text-decoration-none" href="./index.html">Bootstrap</a>入門#02</h1>
+            <h3 class="center">グリッドシステム</h3>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
@@ -34,7 +21,7 @@
                 <li class="breadcrumb-item active" aria-current="page">#02 グリッドシステム</li>
               </ol>
             </nav>
-        </div>
+        
         <p>
             <a href="https://getbootstrap.jp/docs/5.0/layout/grid/" target="_blank">公式ドキュメント</a>を見てみるとこんなことが書いてある。<br><br>
             <q>グリッドシステムは、12 カラムのシステムと 5 段階のレスポンシブ、Sass と mixin、いくつかの定義されたクラスですべての図形とサイズのレイアウトを作成可能です。</q>
@@ -234,3 +221,16 @@
     -->
   </body>
 </html>
+
+<style>
+    .center {
+        text-align: center;
+    }
+    .box1 {
+        background-color: lightgoldenrodyellow;
+    }
+
+    .box2 {
+        background-color: lightblue;
+    }
+</style>

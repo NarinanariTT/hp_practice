@@ -8,21 +8,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <style>
-            .header {
-                text-align: center;
-            }
-            
-        </style>
+        
   </head>
   <body>
     <div class="container" >
-        <div class="header" href="./index.html">
-            <h1><a class="text-decoration-none" href="./index.html">Bootstrap</a>入門#03</h1>
-            <h3>便利タグ紹介コーナー</h3>
-            <p><a href="./1-3-nobootstrap.html" target="_blank">このページにbootstrapを適用しなかったver</a><br>
-            bootstrapでどれくらい見た目が変わってるかの参考にしてみて。</p>
-        </div>
+        <h1 class="center pt-4"><a class="text-decoration-none" href="./index.html">Bootstrap</a>入門#03</h1>
+        <h3 class="center">便利タグ紹介コーナー</h3>
+        <p class="center"><a href="./1-3-nobootstrap.html" target="_blank">このページにbootstrapを適用しなかったver</a><br>
+        bootstrapでどれくらい見た目が変わってるかの参考にしてみて。</p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
@@ -31,24 +24,25 @@
             </ol>
           </nav>
         <div>
-            <h4>見出し</h4>
+            <p>様々なタグに対して、Bootstrapによって見た目が調整されている。それらの例を確認していく。</p>
+            <h4><b>見出し</b></h4>
             <p>hと数字を組み合わせたタグ名をつけることで見出しをつけられる。</p>
             <h1>見出し</h1>
             <h2>見出し</h2>
             <h3>見出し</h3>
             
-            <h4>リスト</h4>
+            <h4 class="mt-4"><b>リスト</b></h4>
             <p>
                 ulタグで囲まれた中にliタグで囲まれたリストアイテムを配置する。
             </p>
-            <ul>
+            <ul></ul>
                 <li>list01</li>
                 <li>list02</li>
                 <li>list03</li>
                 <li>list04</li>
             </ul>
 
-            <h4>テーブル</h4>
+            <h4 class="mt-4"><b>テーブル</b ></h4>
             <p>tableタグで囲まれた中にテーブルの要素を配置する。thタグで太字、trタグで普通の文字。</p>
             <table>
                 <tr>
@@ -213,14 +207,14 @@
                       </table>
                 </div>
 
-                <h4>コード</h4>
+                <h4 class="mt-4"><b>コード</b></h4>
                 <p>以下に示すようにpタグやpreタグ中でcodeタグでコードを明示的に表現できる。</p>
                 <p>HTMLの段落は<code>p</code>です。</p>
                 <pre><code>
                     print("Hello World.")
                 </code></pre>
 
-                <h4>キーボード</h4>
+                <h4 class="mt-4"><b>キーボード</b></h4>
                 <p>kbdタグによってキーボードを表現してくれる。</p>
                 <p><kbd>c</kbd>を押してください。</p>
             </div>
@@ -247,3 +241,10 @@
     -->
   </body>
 </html>
+
+<style>
+    .center {
+        text-align: center;
+    }
+    
+</style>
