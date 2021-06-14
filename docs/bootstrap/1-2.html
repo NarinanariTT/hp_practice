@@ -8,20 +8,191 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        
+        <style>
+            .header {
+                /* background-color: lightcyan; */
+                text-align: center;
+            }
+            .box1 {
+                background-color: lightgoldenrodyellow;
+            }
+
+            .box2 {
+                background-color: lightblue;
+            }
+        </style>
   </head>
   <body>
     <div class="container" >
-        <h1>Bootstrap入門#02</h1>
-        <h4>グリッドシステム</h4>
+        <div class="header">
+            <h1>Bootstrap入門#02</h1>
+            <h3>グリッドシステム</h3>
+        </div>
         <p>
-            製作中
+            <a href="https://getbootstrap.jp/docs/5.0/layout/grid/" target="_blank">公式ドキュメント</a>を見てみるとこんなことが書いてある。<br><br>
+            <q>グリッドシステムは、12 カラムのシステムと 5 段階のレスポンシブ、Sass と mixin、いくつかの定義されたクラスですべての図形とサイズのレイアウトを作成可能です。</q>
+            <br><br>
+
+            グリッドシステムを利用するとレイアウトを思いのままに指定することができる...っぽい。それぞれの言葉について説明していこう。
+            
         </p>
+        <h4>12カラムのシステムとは？</h4>
+        <p>簡単に言うと1行に12列入るシステムと考えて欲しい。</p>
+        <p>クラス属性<code>row</code>のdivタグで囲まれた中にクラス属性に<code>col-1</code>を与えたdivタグを12個並べたものが以下のものを示す。</p>
+        <div class="row">
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+        </div>
+
+        <div>
+            <p>
+                このように1行に12個の箱が収まっている。<br>
+            </p>
+            <p>11個だと</p>
+        </div>
+        <div class="row">
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+        </div>
+        <p>13個だと</p>
+        <div class="row">
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+            <div class="box2 col-1">col-1</div>
+            <div class="box1 col-1">col-1</div>
+        </div>
+        <p>
+            このように1行のうちを収まるように左づめで埋めていき、溢れると改行されて表示されてしまう。
+        </p>
+
+        <p>
+            クラス属性を<code>col-2</code>や<code>col-5</code>などに変えると以下のように大きさが変わる。
+        </p>
+        <div class="row">
+            <div class="box1 col-2">col-2</div>
+            <div  class="box2 col-2">col-2</div>
+            <div class="box1 col-5">col-5</div>
+            <div class="box2 col-3">col-3</div>
+        </div>
+        <p>上に表示したように2列分や5列分を支配する領域を指定できる。</p>
+        <p>この場合も同様に左づめ表示されてゆき、収まらないと改行されて表示される。</p>
+        <div class="row">
+            <div class="box1 col-1">col-1</div>
+            <div  class="box2 col-2">col-2</div>
+            <div class="box1 col-5">col-5</div>
+            <div class="box2 col-1">col-1</div>
+        </div>
+        <div class="row">
+            <div class="box1 col-2">col-2</div>
+            <div  class="box2 col-7">col-7</div>
+            <div class="box1 col-5">col-5</div>
+            <div class="box2 col-3">col-3</div>
+        </div>
+        <p>画像をオシャレに配置するのに使えそうだなぁ。</p>
+        <h4>５段階のレスポンシブとは</h4>
+
+        <div class="table-responsive">
+            <table class="table table-primary">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">xs<br>&lt;576px</th>
+                <th scope="col">sm<br>≥576px</th>
+                <th scope="col">md<br>≥768px</th>
+                <th scope="col">lg<br>≥992px</th>
+                <th scope="col">xl<br>≥1200px</th>
+                <th scope="col">xxl<br>≥1400px</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Container<br><code>max-width</code></th>
+                <td>None(auto)</td>
+                <td>540px</td>
+                <td>720px</td>
+                <td>960px</td>
+                <td>1140px</td>
+                <td>1320px</td>
+              </tr>
+              <tr>
+                <th scope="row">class prefix</th>
+                <td><code>.col-</code></td>
+                <td><code>.col-sm-</code></td>
+                <td><code>.col-md-</code></td>
+                <td><code>.col-lg-</code></td>
+                <td><code>.col-xl-</code></td>
+                <td><code>.col-xxl-</code></td>
+              </tr>
+              <tr>
+                <th scope="row">カラム数</th>
+                <td colspan="6">12</td>
+              </tr>
+              <tr>
+                <th scope="row">Gutter width</th>
+                <td colspan="6">1.5rem(.75rem on reft and right)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+          <p>上記のようなルールでブレークポイントを指定できるというものだ。</p>
+          <p>bootstrapでは小さいものから優先して指定される。<br>
+        <code>col-2</code>のような指定の仕方は一番小さいブレークアウトの段階2列分という指定の仕方であり、<br>
+        より大きなブレークアウトにおいて何も指定していないため、他の全ての状態でも初めの指定が適用されている。</p>
+        <p>試しにクラス属性<code>col-</code>を3つ並べたものと、クラス属性に<code>col-md-4</code>を与えたもの3つ並べたものを比較してみる。</p>
+
+        <div class="row">
+            <div class="box1 col-4">col-4</div>
+            <div class="box2 col-4">col-4</div>
+            <div class="box1 col-4">col-4</div>
+        </div>
+
+        <div class="row">
+            <div class="box2 col-md-4">col-md-4</div>
+            <div class="box1 col-md-4">col-md-4</div>
+            <div class="box2 col-md-4">col-md-4</div>
+            
+        </div>
+        <p>コンテナの時のように開いている画面の幅を変えてみて欲しい</p>
+        <p>コンテナの幅が画面幅に応じて変化するように、colの幅が変化するだろう。</p>
+        <p><code>col-md-4</code>はmd幅の条件に適していない小さな幅の時は何も適用されない。</p>
+        
+        
+
         <div class="pb-5">
         <a class="btn btn-outline-dark" href="./index.html">bootstrap記事一覧に戻る</a>
         <a class="btn btn-outline-dark" href="./1-1.html">#01へ戻る</a>
         <a class="btn btn-outline-dark" href="./1-3.html">#03へ進む</a>
         </div>
+        
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
