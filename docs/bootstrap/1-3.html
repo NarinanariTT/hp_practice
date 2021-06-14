@@ -23,6 +23,13 @@
             <p><a href="./1-3-nobootstrap.html" target="_blank">このページにbootstrapを適用しなかったver</a><br>
             bootstrapでどれくらい見た目が変わってるかの参考にしてみて。</p>
         </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="./index.html">Bootstrap</a></li>
+              <li class="breadcrumb-item active" aria-current="page">#03 便利タグ紹介コーナー</li>
+            </ol>
+          </nav>
         <div>
             <h4>見出し</h4>
             <p>hと数字を組み合わせたタグ名をつけることで見出しをつけられる。</p>
@@ -207,12 +214,14 @@
                 </div>
 
                 <h4>コード</h4>
+                <p>以下に示すようにpタグやpreタグ中でcodeタグでコードを明示的に表現できる。</p>
                 <p>HTMLの段落は<code>p</code>です。</p>
                 <pre><code>
                     print("Hello World.")
                 </code></pre>
 
                 <h4>キーボード</h4>
+                <p>kbdタグによってキーボードを表現してくれる。</p>
                 <p><kbd>c</kbd>を押してください。</p>
             </div>
 
